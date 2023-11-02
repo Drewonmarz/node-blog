@@ -31,7 +31,8 @@ router.post('/', async (req ,res, next )=>{
 
 router.put('/;id', async (req ,res, next )=>{
     req.article = await Article.findByIdAndDelete(req.params.id)
-    res.redirect('/')
+    res.redirect('/') 
+    
     next()
 
 
